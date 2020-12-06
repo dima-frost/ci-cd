@@ -17,12 +17,16 @@ pipeline {
          }
         stage ('docker run') {
             steps {
-                sh 'docker-compose up'
+                dir('Dockerfile dir') {
+                 sh 'docker-compose up'
+                }
             }
         }
         stage ('docker stop') {
             steps {
-                sh 'docker-compose down'
+                dir('Dockerfile dir') {
+                 sh 'docker-compose down'
+                }
             }
         }
     }
