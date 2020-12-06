@@ -10,7 +10,7 @@ pipeline {
     stages{
         stage("create docker image") {
             steps{
-                sh 'docker build -t nginx:1.0 .'
+                sh 'sudo docker build -t nginx:1.0 .'
             }
         }
     }
