@@ -8,9 +8,9 @@ pipeline {
         timestamps()
     }
     stages{
-        stage("First stap") {
+        stage("create docker image") {
             steps{
-                sh 'echo \'i am working!!!!!\''
+                sh 'docker-compose build'
             }
         }
     }
