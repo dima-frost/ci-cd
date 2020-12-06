@@ -7,6 +7,10 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr:'10', artifactNumToKeepStr: '10'))
         timestamps()
     }
+    environment {
+        NAME="DIMA"
+        AGE = '28'
+    }
     stages {
         stage ("create docker image") {
             steps {
@@ -19,6 +23,13 @@ pipeline {
             steps {
                 dir('Dockerfile dir') {
                  sh 'docker-compose up -d'
+                }
+            }
+        }
+        stage ('docker stop') {
+            steps {
+                dir('Dockerfile dir') {
+                 sh 'docker-compose down'
                 }
             }
         }

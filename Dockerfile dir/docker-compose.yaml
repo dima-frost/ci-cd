@@ -9,4 +9,4 @@ services:
       - 8081:80
     environment:
       NAME: Dmytro
-      AGE: 28
+      AGE: 30
