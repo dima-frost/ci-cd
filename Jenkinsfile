@@ -15,10 +15,6 @@ pipeline {
                 }
             }
          }
-        stage ("docker run") {
-            dir ('Dockerfile dir') {
-                 sh 'docker-compose run'
-            }
-        }
+ 
     }
 }
