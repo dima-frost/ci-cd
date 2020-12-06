@@ -18,7 +18,7 @@ pipeline {
         stage ('docker run') {
             steps {
                 dir('Dockerfile dir') {
-                 sh 'docker-compose up'
+                 sh 'docker-compose up -d'
                 }
             }
         }
