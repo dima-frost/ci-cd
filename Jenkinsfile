@@ -26,18 +26,5 @@ pipeline {
                 }
             }
         }
-        node {
-           try {
-            notifyStarted()
-
-            /* ... existing build steps ... */
-
-            notifySuccessful()
-          } catch (e) {
-            currentBuild.result = "FAILED"
-            notifyFailed()
-            throw e
-          }
-        }
     }
 }
