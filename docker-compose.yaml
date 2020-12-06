@@ -1,9 +1,10 @@
 version: "3.8"
 services:
-  volumes:
-    - "/home/user/gitrepo:/gitRep"
+
 
   customNginx:
+    volumes:
+      - "/home/user/gitrepo:/gitRep"
     build: .
     image: customnginx:1.0
     ports:
