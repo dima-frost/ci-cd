@@ -3,10 +3,10 @@ services:
   customNginx:
     volumes:
       - "/home/user/gitrepo:/gitRep"
-    build: .
+    build: ./
     image: customnginx:1.0
     ports:
-      - 443:80
+      - 8081:80
     environment:
       NAME: Dmytro
       AGE: 28
