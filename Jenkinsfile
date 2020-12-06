@@ -22,12 +22,5 @@ pipeline {
                 }
             }
         }
-        stage ('docker stop') {
-            steps {
-                dir('Dockerfile dir') {
-                 sh 'docker-compose down'
-                }
-            }
-        }
     }
 }
