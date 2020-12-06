@@ -3,7 +3,7 @@ services:
   customNginx:
     volumes:
       - "/home/user/gitrepo:/gitRep"
-    build: ./
+    build: ..
     image: customnginx:1.0
     ports:
       - 8081:80

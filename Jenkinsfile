@@ -11,8 +11,8 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "start building"
-                dir('./'){
-                 sh 'docker build -t nginx:1.0 .'
+                dir('Dockerfile dir'){
+                 sh 'docker build .'
                 }
             }
         }
