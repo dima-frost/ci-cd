@@ -24,5 +24,6 @@ pipeline {
             steps {
                 sh 'docker-compose down'
             }
+        }
     }
 }
