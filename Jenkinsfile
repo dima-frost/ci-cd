@@ -13,9 +13,13 @@ pipeline {
                 echo "start building"
                 dir('Dockerfile dir'){
                  sh 'docker-compose build'
-
                 }
             }
+        stage("docker run")
+        echo "docker run"
+        dir('Dockerfile dir'){
+                 sh 'docker-compose run'
+                }
         }
     }
 }
